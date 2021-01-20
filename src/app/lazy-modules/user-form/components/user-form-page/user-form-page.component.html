@@ -1,0 +1,45 @@
+<a class="p-1" [routerLink]="['/', 'users']">Cofnij</a>
+<form [formGroup]="form">
+  <div class="p-1">
+    <p class="m-0">
+      Parent
+    </p>
+    <select name="cars" id="cars" formControlName="parentUserId">
+      <option *ngFor="let user of (users$ | async)" [value]="user.id">
+        {{ user.firstName }} {{ user.lastName }}
+      </option>
+    </select>
+  </div>
+  <div class="p-1">
+    <p class="m-0">
+      Name
+    </p>
+    <input type="text" formControlName="firstName">
+  </div>
+  <div class="p-1">
+    <p class="m-0">
+      Surname
+    </p>
+    <input type="text" formControlName="lastName">
+  </div>
+  <div class="p-1">
+    <p class="m-0">
+      Email
+    </p>
+    <input type="text" formControlName="email">
+  </div>
+
+  <div class="p-1">
+    <button (click)="showValue()">submit</button>
+  </div>
+</form>
+
+<div class="p-1" *ngIf="form.get('email').hasError('prowlyDomain')">
+  error prowlyDomain
+</div>
+<div class="p-1" *ngIf="form.get('email').hasError('inclidePlus')">
+  error inclidePlus
+</div>
+<div class="p-1" *ngIf="formValue">
+  Form: {{ formValue | json }}
+</div>

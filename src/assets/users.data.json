@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Brown",
+      "email": "john.brown@example.com",
+      "profileId": "10"
+    },
+    {
+      "id": "2",
+      "firstName": "Anne",
+      "lastName": "Obama",
+      "email": "anne.obama@example.com",
+      "profileId": "14"
+    },
+    {
+      "id": "3",
+      "firstName": "Laura",
+      "lastName": "Good",
+      "email": "laura.good@example.com",
+      "profileId": "18"
+    }
+  ]
+}
